@@ -40,5 +40,4 @@ C<.ispell*>.
 
 This code was essentially pilfered from L<Code::TidyAll::Plugin::SortLines>
 
-
-1;
+=cut
