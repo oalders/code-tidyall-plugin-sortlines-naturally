@@ -1,0 +1,5 @@
+.build
+/Code-TidyAll-Plugin-SortLines-Naturally*
+local/
+*.swp
+.tidyall.d/

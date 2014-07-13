@@ -1,0 +1,35 @@
+NAME
+    Code::TidyAll::Plugin::SortLines::Naturally
+
+VERSION
+    version 0.000001
+
+SYNOPSIS
+       # In configuration:
+
+       [SortLines::Naturally]
+       select = .ispell* **/.gitignore
+
+DESCRIPTION
+    Sorts the lines of a file; whitespace lines are discarded. Useful for
+    files containing one entry per line, such as ".svnignore", ".gitignore",
+    and ".ispell*".
+
+NAME
+    Code::TidyAll::Plugin::SortLines::Naturally - sort lines of a file using
+    Sort::Naturally
+
+ACKNOWLEDGEMENTS
+    This code was essentially pilfered from Code::TidyAll::Plugin::SortLines
+
+    1;
+
+AUTHOR
+    Olaf Alders <olaf@wundercounter.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2014 by Olaf Alders.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
