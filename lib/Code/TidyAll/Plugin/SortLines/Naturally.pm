@@ -17,11 +17,9 @@ sub transform_source {
 1;
 __END__
 
+# ABSTRACT: Sort lines of a file using Sort::Naturally
+
 =pod
-
-=head1 NAME
-
-Code::TidyAll::Plugin::SortLines::Naturally - sort lines of a file using Sort::Naturally
 
 =head1 SYNOPSIS
 

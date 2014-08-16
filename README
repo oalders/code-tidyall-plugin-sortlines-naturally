@@ -1,8 +1,9 @@
 NAME
-    Code::TidyAll::Plugin::SortLines::Naturally
+    Code::TidyAll::Plugin::SortLines::Naturally - Sort lines of a file using
+    Sort::Naturally
 
 VERSION
-    version 0.000001
+    version 0.000002
 
 SYNOPSIS
        # In configuration:
@@ -15,14 +16,8 @@ DESCRIPTION
     files containing one entry per line, such as ".svnignore", ".gitignore",
     and ".ispell*".
 
-NAME
-    Code::TidyAll::Plugin::SortLines::Naturally - sort lines of a file using
-    Sort::Naturally
-
 ACKNOWLEDGEMENTS
     This code was essentially pilfered from Code::TidyAll::Plugin::SortLines
-
-    1;
 
 AUTHOR
     Olaf Alders <olaf@wundercounter.com>
