@@ -12,7 +12,7 @@ sub transform_source {
 
     my $collator = Unicode::Collate::Locale->new( locale => $self->locale );
     return
-        join( "\n", $collator->sort( grep { /\S/ } split( /\n/, $source ) ) )
+        join( "\n", $collator->sort( grep {/\S/} split( /\n/, $source ) ) )
         . "\n";
 }
 

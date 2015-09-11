@@ -30,15 +30,13 @@ EOF
 
 my $ct = Code::TidyAll->new(
     root_dir => $dir,
-    plugins  => {
-        'SortLines::Naturally' => { select => $file_name },
-    }
+    plugins  => { 'SortLines::Naturally' => { select => $file_name }, }
 );
 
 my $output;
 $output = capture_merged { $ct->process_all() };
 is( $output, "[tidied]  $file_name\n", 'expected output' );
-is( scalar( read_text($full_path) ), <<'EOF', 'sorted' );
+is( scalar( read_text( $full_path ) ), <<'EOF', 'sorted' );
 easy
 Ed
 eel
