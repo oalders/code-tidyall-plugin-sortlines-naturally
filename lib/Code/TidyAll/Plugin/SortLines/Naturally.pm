@@ -1,23 +1,25 @@
-use strict;
-use warnings;
-
 package Code::TidyAll::Plugin::SortLines::Naturally;
 
 use Moo;
 extends 'Code::TidyAll::Plugin';
 
-use Sort::Naturally qw( nsort );
+use Unicode::Collate::Locale ();
+
+has 'locale' => ( is => 'ro', default => 'en_US' );
 
 sub transform_source {
     my ( $self, $source ) = @_;
 
-    return join( "\n", nsort( grep {/\S/} split( /\n/, $source ) ) ) . "\n";
+    my $collator = Unicode::Collate::Locale->new( locale => $self->locale );
+    return
+        join( "\n", $collator->sort( grep { /\S/ } split( /\n/, $source ) ) )
+        . "\n";
 }
 
 1;
 __END__
 
-# ABSTRACT: Sort lines of a file using Sort::Naturally
+# ABSTRACT: Sort lines of a file using Unicode::Collate::Locale
 
 =pod
 
@@ -33,6 +35,16 @@ __END__
 Sorts the lines of a file; whitespace lines are discarded. Useful for files
 containing one entry per line, such as C<.svnignore>, C<.gitignore>, and
 C<.ispell*>.
+
+=head1 CONFIGURATION
+
+=over
+
+=item locale
+
+The locale to use for collation. Defaults to "en_US".
+
+=back
 
 =head1 ACKNOWLEDGEMENTS
 
