@@ -1,6 +1,8 @@
 Revision history for Code-TidyAll-Plugin-SortLines-Naturally
 
 {{$NEXT}}
+
+0.000003  2015-09-11 18:55:38-04:00 America/Toronto
     - Switches from Sort::Naturally to Unicode::Collate::Locale in order to be
       able to force an encoding on the repository.  Sort::Naturally isn't
       configurable in this way and leads to issues if devs with different
