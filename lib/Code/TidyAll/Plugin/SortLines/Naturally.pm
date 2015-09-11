@@ -1,3 +1,6 @@
+use strict;
+use warnings;
+
 package Code::TidyAll::Plugin::SortLines::Naturally;
 
 use Moo;

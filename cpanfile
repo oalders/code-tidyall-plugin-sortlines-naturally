@@ -1,6 +1,8 @@
 requires "Code::TidyAll::Plugin" => "0";
 requires "Moo" => "0";
 requires "Unicode::Collate::Locale" => "0";
+requires "strict" => "0";
+requires "warnings" => "0";
 
 on 'build' => sub {
   requires "Module::Build" => "0.28";
@@ -14,9 +16,7 @@ on 'test' => sub {
   requires "File::Temp" => "0";
   requires "Test::More" => "0";
   requires "open" => "0";
-  requires "strict" => "0";
   requires "utf8" => "0";
-  requires "warnings" => "0";
 };
 
 on 'configure' => sub {
